@@ -1,0 +1,43 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="./login-app/login-app.html">
+<link rel="import" href="./signup-app/signup-app.html">
+
+<dom-module id="logeo-app">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>[[propLogeo]] works!</h2>
+
+    <template is="dom-if" if="[[haveAccount]]">
+        <login-app></login-app>
+    </template>
+    <template is="dom-if" if="[[haveAccount]]">
+        <signup-app></signup-app>
+    </template>
+
+  </template>
+
+  <script>
+
+    class LogeoApp extends Polymer.Element {
+      static get is() { return 'logeo-app'; }
+      static get properties() {
+        return {
+          propLogeo: {
+            type: String,
+            value: 'logeo-app'
+          },
+          haveAccount: {
+              type: Boolean,
+              value: true
+          }
+        };
+      }
+    }
+
+    window.customElements.define(LogeoApp.is, LogeoApp);
+  </script>
+</dom-module>

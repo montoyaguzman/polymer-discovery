@@ -1,0 +1,30 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+
+<dom-module id="login-app">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>[[propLogin]] works!</h2>
+
+  </template>
+
+  <script>
+
+    class LoginApp extends Polymer.Element {
+      static get is() { return 'login-app'; }
+      static get properties() {
+        return {
+            propLogin: {
+            type: String,
+            value: 'login-app'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(LoginApp.is, LoginApp);
+  </script>
+</dom-module>

@@ -1,0 +1,7 @@
+{
+  "name": "domiciliaciones",
+  "short_name": "domiciliaciones",
+  "description": "Front del proyecto de domiciliaciones para techU",
+  "start_url": "/",
+  "display": "standalone"
+}

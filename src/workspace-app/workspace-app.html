@@ -1,0 +1,32 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+
+<dom-module id="workspace-app">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>[[propWorkspace]] works!</h2>
+
+    
+
+  </template>
+
+  <script>
+
+    class WorkspaceApp extends Polymer.Element {
+      static get is() { return 'workspace-app'; }
+      static get properties() {
+        return {
+            propWorkspace: {
+            type: String,
+            value: 'workspace-app'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(WorkspaceApp.is, WorkspaceApp);
+  </script>
+</dom-module>

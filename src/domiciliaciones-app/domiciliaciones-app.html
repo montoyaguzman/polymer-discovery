@@ -1,0 +1,49 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../bower_components/polymer/lib/elements/dom-if.html">
+<link rel="import" href="../logeo-app/logeo-app.html">
+<link rel="import" href="../workspace-app/workspace-app.html">
+
+<dom-module id="domiciliaciones-app">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>[[containerName]] works!</h2>
+
+    
+    <template is="dom-if" if="[[sessionApp]]">
+      <logeo-app></logeo-app>  
+    </template>
+    
+    <template is="dom-if" if="[[sessionApp]]">
+      <workspace-app></workspace-app>
+    </template>
+
+  </template>
+
+  <script>
+    /**
+     * @customElement
+     * @polymer
+     */
+    class DomiciliacionesApp extends Polymer.Element {
+      static get is() { return 'domiciliaciones-app'; }
+      static get properties() {
+        return {
+          containerName: {
+            type: String,
+            value: 'Main container'
+          },
+          sessionApp: {
+              type: Boolean,
+              value: true
+          }
+        };
+      }
+    }
+
+    window.customElements.define(DomiciliacionesApp.is, DomiciliacionesApp);
+  </script>
+</dom-module>

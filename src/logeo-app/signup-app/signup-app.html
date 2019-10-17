@@ -1,0 +1,30 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+
+<dom-module id="signup-app">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>[[propSignup]] works!</h2>
+
+  </template>
+
+  <script>
+
+    class SigupApp extends Polymer.Element {
+      static get is() { return 'signup-app'; }
+      static get properties() {
+        return {
+            propSignup: {
+            type: String,
+            value: 'signup-app'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(SigupApp.is, SigupApp);
+  </script>
+</dom-module>
